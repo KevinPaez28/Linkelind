@@ -16,6 +16,9 @@
   --color_subtitulo:#777;
   --profile-numeros:#7297c7;
   --border-boton:#ccc;
+  --interaccion-icon:#2874b1;
+  --fondo-interaccion:#a1c4e1;
+  --fondo-header:#fff;
 }
 .contenido{
   background-color:var(--fondo-principal) ;
@@ -30,7 +33,7 @@
   'sidebar-rigth content__main sidebar-left';   
   gap:1rem; 
   padding-top:20px;
-  padding: 0 70px;
+  padding: 0 50px;
   margin-top:20px;
   margin: 0 50px;
 }
@@ -58,9 +61,11 @@ background-color: var(--fondo-blancos);
   height: 55px;
   margin-bottom: 5px;
   box-shadow: 0px 1px 8px var(--border--bottom);
-  padding: 0 70px;
-
-
+  padding: 0 50px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color:var(--fondo-header) ;
 }
 .navegacion{
   display: flex;
@@ -229,6 +234,8 @@ font-size: 13px;
  justify-content: center;
  margin:10px 0px;
  padding: 0 10px;
+   color:var(--color-letra);
+
 }
 .logo__text{
   width: 20px;
@@ -250,14 +257,47 @@ font-size: 13px;
 
 .sidebar__title{
   color:var(--color_subtitulo);
-  padding-left: 25px;
+  padding-left:25px;
+  font-size: 13px;
+  margin:7px 5px;
   
-
+  
 }
 .sidebar__interaccion{
   display: flex;
+  flex-direction: column;
+  font-size: 14px;
 }
+.interaccion__botones--color_gris:hover{
+  background-color:var(--fondo-interaccion) ;
+    transition: 1.5s;
+
+}
+.sidebar__interaccion .interaccion__botones .interaccion__icon{
+  color:var(--interaccion-icon);
+  padding: 3px;
+  font-weight: 900;
+}
+   
 .interaccion__botones{
   text-decoration: none;
+  padding-left:25px;
+  color: var(--color-letra);
+  align-items: center;
+  padding: 4px 25px;  display: flex;
+  gap:5px;
+}
+.interlineado{
+  height: 1px;
+  background-color: var(--fondo-principal);
+}
+.sidebar__bottom{
+  color:var(--interaccion-icon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  width: 100%;
+  height: 40px;
 
 }
